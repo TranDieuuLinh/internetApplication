@@ -117,7 +117,17 @@
       <section class="lab-section">
         <h2>Attribute, Class and Style Binding with <code>v-bind</code></h2>
         <p>Highlighting Specific Authors:</p>
-        <div :style="{backgroundColor: backgroundColor, padding: paddingNumber+'px',color:color, }">{{ orwell?.name }}</div>
+        <ul>
+          <li v-for="author in authors" :key="author.id">
+            <p v-if="author.name === orwell?.name" :style="{backgroundColor: backgroundColor, padding: paddingNumber+'px',color:color, margin:0 }">
+            {{ author.name }}
+            </p>
+            <p v-else>{{ author.name }} </p>
+              
+          </li>
+        </ul>
+
+
       </section>
     </div>
   </template>
