@@ -1,12 +1,7 @@
 <script setup>
-import { useRouter } from 'vue-router';
 import HelloWorld from './components/HelloWorld.vue';
 import TheWelcome from './components/TheWelcome.vue';
-
-const router = useRouter();
-function goToProfile() {
-  router.push('/my-profile');
-}
+import MyName from './components/MyName.vue'
 
 </script>
 
@@ -19,8 +14,7 @@ function goToProfile() {
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <div >
-        <button class = "profileButton" @click="goToProfile">My Profile</button>
-      <RouterView/>
+       <MyName/>
       </div>
      
     </div>
